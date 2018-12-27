@@ -1,0 +1,118 @@
+#main {}
+
+.int_contact {
+	background-size: cover !important;
+	padding: 100px 0;
+
+	.title_section {
+		margin-top: 0;
+	}
+}
+
+
+.list_block {
+	margin: 0;
+	padding: 0;
+
+	li {
+		display: block;
+		list-style: none;
+		margin: 20px 0;
+		padding: 0;
+	}
+}
+
+.wpcf7-form {
+	input,
+	textarea {
+		background-color: rgba(255, 255, 255, 0.80);
+		border: none;
+		padding: 7px 5px;
+	}
+
+	label {
+		color: $white;
+		font-family: $font;
+		font-weight: 100;
+		font-size: 16px;
+	}
+}
+
+ // BLOG 
+.blog_list {
+	background-color: $black2;
+	padding: 100px 0;
+}
+
+.listposts_sidebar {
+	margin: 30px 0;
+
+	.date {
+		color: $gray;
+		font-family: $font;
+		font-size: 20px;
+		font-weight: 600;
+		margin-top: 15px;
+	}
+
+	.title_pots {
+		color: $white;
+		font-family: $font;
+		font-size: 25px;
+		font-weight: 600;
+	}
+}
+
+.list_postscomplete {
+	.content_post {
+		color: $white;
+		font-size: 15px;
+		font-family: $fonta;
+		font-weight: 400;
+		letter-spacing: 2px;
+	}
+	.item_post {
+		border-bottom: solid #8a8a8a 1px;
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+	}
+
+	.subtitle_post {
+		color: $white;
+		font-size: 20px;
+		text-transform: none;
+	}
+
+	.title_pots {
+		color: $white;
+		margin-bottom: 50px;
+		margin-top: 0;
+		font-family: $font;
+		font-weight: 600;
+		font-size: 30px;
+		text-transform: uppercase;
+		position: relative;
+
+		&::before {
+			background-color: $base;
+			bottom: -33px;
+			content: '';
+			height: 10px;
+			left: 0;
+			position: absolute;
+			width: 50px;
+		}
+	}
+}
+
+.btn_more {
+	color: $white;
+	font-family: $font;
+	font-weight: 400;
+	font-size: 20px;
+
+	&:hover {
+		color: $white;
+		text-decoration: underline;
+	}
+}

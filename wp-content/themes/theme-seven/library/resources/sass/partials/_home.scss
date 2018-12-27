@@ -1,0 +1,60 @@
+#home {
+	.ico_down {
+		bottom: 5%;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+
+		i {
+			cursor: pointer;
+			color: $white;
+			font-size: 35px;
+		}
+	}
+	.slier_ppal {
+		height: 100vh;
+		position: relative;
+
+		.n2-ss-slide,
+		.n2-ss-slider-3,
+		.n2-ss-slider-1 {
+			height: 100vh !important;
+		}
+	}
+
+	.title_main {
+		color: $white;
+		font-weight: 800;
+		font-family: $font;
+		font-size: 80px;
+		margin: 0;
+		top: 45vh;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+
+		small {
+			color: $white;
+			font-weight: 400;
+		}
+	}
+}
+
+.all_post {
+	background-color: $black2;
+	padding: 30px 0;
+
+	.item_cat {
+		background-size: cover !important;
+		float: left;
+		margin: 0 4px 10px;
+    width: 32%;
+
+    a {
+    	display: block;
+    	height: 100%;
+    	text-align: center;
+			width: 100%;
+    }
+	}
+}

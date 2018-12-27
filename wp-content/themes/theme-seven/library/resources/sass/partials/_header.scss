@@ -1,0 +1,150 @@
+header {
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 15px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9;
+
+	.logo {
+		float: left;
+
+		img {
+			height: auto;
+			width: 140px;
+		}
+	}
+
+	.open_nav {
+		float: right;
+		cursor: pointer;
+		position: relative;
+    top: 14px;
+
+		span {
+			background-color: $black;
+			display: block;
+			margin-bottom: 5px;
+			height: 4px;
+			width: 28px;
+		}
+	}
+}
+
+a {
+  text-decoration: none; 
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.close_nav {
+	float: right;
+	cursor: pointer;
+	position: absolute;
+	right: 8.3%;
+	top: 4.3%;
+
+	span {
+		background-color: $black;
+		display: block;
+		margin-bottom: 5px;
+		height: 4px;
+		position: relative;
+		width: 28px;
+	}
+
+	.close_left 	{ transform: rotate(45deg); top: 8px; }
+	.close_right 	{ transform: rotate(-45deg); }
+}
+
+.main_nav {
+	background-color: rgba(255, 255, 255, 0.70);
+	height: 100vh;
+	padding-top: 5%;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+
+	ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin: 0;
+				padding: 0;
+			}	
+	}
+
+	#menu-menu-principal {
+		.menu-item {
+			display: block;
+			margin: 0 0 6px;
+			padding: 0;
+
+			a {
+				color: $black;
+				font-family: $font;
+				font-weight: 800;
+				font-size: 50px;
+				text-transform: uppercase;
+				transition: all .2s linear;
+
+				&:hover {
+					color: $base;
+				}
+			}
+		}
+	}
+
+	#menu-menu-redes {
+		margin-top: 40px;
+
+		.menu-item {
+			display: inline-block;
+			margin: 0 10px 0;
+			padding: 0;
+
+			a {
+				background-color: $black;
+				border-radius: 50%;
+				color: rgba(255, 255, 255, 1);
+				display: block;
+				height: 30px;
+				padding: 6px 8px;
+				width: 30px;
+				transition: all .2s linear;
+
+				&:hover {
+					background-color: $base;
+				}
+			}
+		}
+	}
+}
+
+.logo-opennav {
+	margin-bottom: 40px;
+	width: 100%;
+
+	a {
+		margin: 0 auto;
+
+		img {
+			margin: 0 auto;
+			width: 62px;
+		}
+	}
+}
+
+.main_nav {
+	top: -100%;
+	transition: all .2s linear;
+}
+
+.main_navopen {
+	top: 0%;
+	transition: all .2s linear;	
+}
