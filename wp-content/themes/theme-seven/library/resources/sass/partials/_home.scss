@@ -48,13 +48,61 @@
 		background-size: cover !important;
 		float: left;
 		margin: 0 4px 10px;
-    width: 32%;
+   		width: 32%;
 
-    a {
-    	display: block;
-    	height: 100%;
-    	text-align: center;
+		a {
+			display: block;
+			height: 100%;
+			text-align: center;
+			position: relative;
 			width: 100%;
-    }
+		}
+
+		.content_hover {
+			background-color: transparent;
+			height: 100%;
+			padding-top: 32%;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			transition: all .2s linear;
+
+			.title {
+				color: $black2;
+				font-family: $font;
+				font-size: 35px;
+				line-height: 55px;
+				margin: 0;
+				opacity: 0;
+				text-transform: uppercase;
+				position: relative;
+				top: 50px;
+				transition: all .2s linear;
+
+				small {
+					font-size: 25px;
+					color: $black2;
+					position: relative;
+
+					&::before {
+						content: '';
+						background-color: $base;
+						height: 6px;
+						position: absolute;
+						top: -12px;
+						width: 36%;
+						left: 32%;;
+					}
+				} 
+			}
+		}
+
+		&:hover {
+			.content_hover {
+				background-color: rgba($color: $white, $alpha: 0.63);
+
+				.title { top: 0; opacity: 1; }
+			}
+		}
 	}
 }

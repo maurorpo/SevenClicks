@@ -116,3 +116,40 @@
 		text-decoration: underline;
 	}
 }
+
+// INT CATEGORY
+.int_category {
+	background-color: $black2;
+	padding: 100px 0;
+
+	.title_category {
+		font-size: 35px;
+		color: $white;
+		font-family: $font;
+		text-transform: uppercase;
+	}
+
+	.urlweb {
+		a {
+			color: $white;
+			font-size: 14px;
+			font-family: $font;
+			font-weight: 600;
+			letter-spacing: 1px;
+			transition: all .2s linear;
+
+			&:hover {
+				color: $base;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.content_post {
+		color: $white;
+		font-size: 14px;
+		font-family: $fonta;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+}

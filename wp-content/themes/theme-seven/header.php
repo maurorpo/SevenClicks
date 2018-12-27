@@ -25,20 +25,15 @@
     <?php wp_head() ?>
   </head>
   <body <?php body_class() ?>>
-    <script>
-      jQuery('.open_nav  span').on('click', function(){
-        jQuery('.main_nav').addClass('.main_navopen')
-      });
-    </script>
     <header>
       <div class="container">
         <div class="logo">
           <a href="<?php echo home_url('/') ?>"><img src="<?php echo get_template_directory_uri() ?>/library/images/logo.svg" alt="Seven Clicks"></a>
         </div>
         <div class="open_nav">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="lineopen"></span>
+          <span class="lineopen"></span>
+          <span class="lineopen"></span>
         </div>
       </div>
     </header>
@@ -55,3 +50,12 @@
       <?php wp_nav_menu(['container' => false, 'menu-ppal' => __( 'The Main Menu', 'bonestheme' ), 'theme_location' => 'main-nav' ]); ?>
       <?php wp_nav_menu(['container' => false, 'menu-redes' => __( 'The Main Redes', 'bonestheme' ), 'theme_location' => 'redes-nav' ]); ?>
     </nav>
+    <script>
+      jQuery('.open_nav').on('click', function(){
+        jQuery('.main_nav').addClass('main_open');
+      });
+      jQuery('.close_nav').on('click', function(){
+        jQuery('.main_nav').removeClass('main_open');
+      });
+
+    </script>

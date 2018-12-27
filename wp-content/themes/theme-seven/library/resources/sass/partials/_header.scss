@@ -42,7 +42,7 @@ a {
 	float: right;
 	cursor: pointer;
 	position: absolute;
-	right: 8.3%;
+	right: 5.5%;
 	top: 4.3%;
 
 	span {
@@ -59,7 +59,7 @@ a {
 }
 
 .main_nav {
-	background-color: rgba(255, 255, 255, 0.70);
+	background-color: rgba(255, 255, 255, 0.90);
 	height: 100vh;
 	padding-top: 5%;
 	position: fixed;
@@ -140,11 +140,9 @@ a {
 }
 
 .main_nav {
-	top: -100%;
-	transition: all .2s linear;
+	top: -9999%;
+	transition: all .4s linear;
 }
 
-.main_navopen {
-	top: 0%;
-	transition: all .2s linear;	
-}
+.main_open { top: 0%; }
+
