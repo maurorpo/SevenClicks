@@ -10,25 +10,20 @@
 		<article>
 			<div class="container">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<div class="col-5 col-md-5">
+					<div class="col-4 col-md-4">
 						<h1 class="title_category"><?php the_title() ?></h1>
             <article class="content_post"><?php the_content() ?></article>
             <div class="urlweb"><a href="<?php echo the_field('link_web') ?>"><?php echo the_field('link_web') ?></a></div>
           </div>
-          <div class="col-7 col-md-7">
+          <div class="col-8 col-md-8">
+            <?php $galery = get_field('imgs_galery') ?>
             <div class="owl-carousel owl-theme">
-              <div class="item"><h4>1</h4></div>
-              <div class="item"><h4>2</h4></div>
-              <div class="item"><h4>3</h4></div>
-              <div class="item"><h4>4</h4></div>
-              <div class="item"><h4>5</h4></div>
-              <div class="item"><h4>6</h4></div>
-              <div class="item"><h4>7</h4></div>
-              <div class="item"><h4>8</h4></div>
-              <div class="item"><h4>9</h4></div>
-              <div class="item"><h4>10</h4></div>
-              <div class="item"><h4>11</h4></div>
-              <div class="item"><h4>12</h4></div>
+              <?php foreach ($galery as $img) : ?>
+                <?php $img_slider = $img['img_galery'] ?>
+                <div class="item">
+                  <img src="<?php echo $img_slider ?>" alt="">
+                </div>
+              <?php endforeach ?>
             </div>
           </div>
 				<?php endwhile; endif; ?>

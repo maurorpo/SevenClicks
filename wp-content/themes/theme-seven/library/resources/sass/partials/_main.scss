@@ -126,7 +126,19 @@
 		font-size: 35px;
 		color: $white;
 		font-family: $font;
+		margin-bottom: 35px;
+		position: relative;
 		text-transform: uppercase;
+
+		&::before {
+			background-color: $base;
+			bottom: -51%;
+			content: '';
+			height: 7px;
+			left: 0;
+			position: absolute;
+			width: 50px;
+		}
 	}
 
 	.urlweb {
@@ -137,6 +149,7 @@
 			font-weight: 600;
 			letter-spacing: 1px;
 			transition: all .2s linear;
+			text-decoration: none;
 
 			&:hover {
 				color: $base;
@@ -151,5 +164,20 @@
 		font-family: $fonta;
 		font-weight: 400;
 		letter-spacing: 1px;
+	}
+
+	.owl-nav {
+		margin-top: 15px;
+		position: relative;
+
+		button {
+			span {
+				color: $white;
+				font-family: $font;
+				font-size: 45px;
+			}
+		}
+
+		.owl-next { position: absolute; right: 0; }
 	}
 }
