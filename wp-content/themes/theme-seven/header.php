@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title><?php wp_title('') ?></title>
+    <title>Seven Clicks | <?php the_title() ?></title>
 
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -21,11 +21,24 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Aleo" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
     <?php wp_head() ?>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
   </head>
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("nav_ppal").style.top = "0";
+      } else {
+        document.getElementById("nav_ppal").style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
   <body <?php body_class() ?>>
-    <header>
+    <header id="nav_ppal" style="transition: top .2s linear; top: 0;">
       <div class="container">
         <div class="logo">
           <a href="<?php echo home_url('/') ?>"><img src="<?php echo get_template_directory_uri() ?>/library/images/logo.svg" alt="Seven Clicks"></a>
@@ -44,7 +57,7 @@
       </div>
       <div class="logo-opennav">
         <a href="<?php echo home_url('/') ?>">
-          <img src="<?php echo get_template_directory_uri() ?>/library/images/ico-logo.svg" alt="Seven Clicks">
+          <img src="<?php echo get_template_directory_uri() ?>/library/images/logo-menu.svg" alt="Seven Clicks">
         </a>
       </div>
       <?php wp_nav_menu(['container' => false, 'menu-ppal' => __( 'The Main Menu', 'bonestheme' ), 'theme_location' => 'main-nav' ]); ?>
@@ -57,5 +70,4 @@
       jQuery('.close_nav').on('click', function(){
         jQuery('.main_nav').removeClass('main_open');
       });
-
     </script>

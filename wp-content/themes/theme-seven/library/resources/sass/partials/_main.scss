@@ -168,7 +168,11 @@
 
 	.owl-nav {
 		margin-top: 15px;
-		position: relative;
+		margin-top: 15px;
+		position: absolute;
+		width: 91%;
+		top: 38%;
+		left: 5%;
 
 		button {
 			span {
@@ -179,5 +183,39 @@
 		}
 
 		.owl-next { position: absolute; right: 0; }
+	}
+}
+
+.back_page {
+	bottom: -25%;
+	display: block;
+	position: absolute;
+	font-size: 45px;
+	right: 5%;
+
+	a {
+		color: $white;
+		font-family: $font;
+
+		span { font-size: 20px; position: relative; top: -5px; }
+
+		&:hover { text-decoration: none;  }
+	}
+}
+
+.int_category {
+	.owl-carousel-wrap {
+		margin-top: 32px;
+
+	}
+}
+
+.owl-carousel {
+	.owl-item {
+		img {
+			margin: 0 auto;
+			height: 486px;
+			width: auto;
+		}
 	}
 }

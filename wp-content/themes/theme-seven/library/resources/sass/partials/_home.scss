@@ -48,7 +48,7 @@
 		background-size: cover !important;
 		float: left;
 		margin: 0 4px 10px;
-   		width: 32%;
+   	width: 32%;
 
 		a {
 			display: block;
@@ -103,6 +103,11 @@
 
 				.title { top: 0; opacity: 1; }
 			}
+		}
+
+		img {
+			object-fit: cover;
+			height: 400px;
 		}
 	}
 }

@@ -11,5 +11,48 @@
 }
 
 @media handheld, only screen and (max-width: 414px) {
-    
+  header  {
+  	.logo {
+  		img { width: 105px; }
+  	}
+
+  	.open_nav { top: 7px; }
+  }
+
+  footer {
+  	.logo_footer { float: initial; width: 100%; text-align: center; }
+  	.copy_text  { text-align: center;  width: 100% }
+  	.nav_footer {
+  		float: initial;
+  		margin-top: 40px;
+  		position: initial;
+  		text-align: center;
+  	}
+  }
+
+  #home {
+  	.title_main {
+  		top: 26vh;
+  	}
+  }
+
+  .all_post {
+  	.item_cat {
+  		width: 100%;
+
+  		.content_hover {
+				background-color: rgba($color: $white, $alpha: 0.63);
+
+				.title { top: 0; opacity: 1; }
+			}
+  	}
+  }
+	
+	.back_page {
+		position: relative;
+		text-align: center;
+		width: 100%;
+	}
+
+  .int_category { padding: 100px 0 19px; }
 }
