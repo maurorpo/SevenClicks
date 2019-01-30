@@ -219,3 +219,55 @@
 		}
 	}
 }
+
+.int-dest {
+	background-color: $black2;
+
+	.banner_dest {
+		background-size: cover;
+		height: 500px;
+		margin-bottom: 50px;
+		position: relative;
+	}
+
+	.owl-carousel {
+		.owl-item {
+			img {
+				height: auto;
+				width: 100%;
+			}
+		}
+	}
+
+	.owl-nav {
+		margin-top: 15px;
+		position: absolute;
+		width: 106%;
+    top: 28%;
+    left: -3%;
+
+		button {
+			span {
+				color: $white;
+				font-family: $font;
+				font-size: 45px;
+			}
+		}
+
+		.owl-next { position: absolute; right: 0; }
+	}
+
+	.title_ppl {
+		align-items: center;
+		color: $white;
+		font-family: $font;
+		font-size: 50px;
+		display: flex;
+		background-color: rgba( 19, 19, 19, 0.58);
+		height: 100%;
+		justify-content: center;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+	}
+}
